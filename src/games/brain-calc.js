@@ -18,7 +18,7 @@ const calculate = (a, b, operation) => {
 const generateGameData = () => {
   const operations = ['+', '-', '*'];
   const gameData = [];
-  for (let i = 0; i < roundsCount; i++) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const numberA = Math.floor(Math.random() * 30) + 1;
     const numberB = Math.floor(Math.random() * 30) + 1;
     const operation = operations[Math.floor(Math.random() * operations.length)];

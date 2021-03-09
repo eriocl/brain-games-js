@@ -16,7 +16,7 @@ const findGcd = (first, second) => {
 
 const generateGameData = () => {
   const gameData = [];
-  for (let i = 0; i < roundsCount; i++) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const numberA = Math.floor(Math.random() * 30) + 1;
     const numberB = Math.floor(Math.random() * 30) + 1;
     const question = `${numberA} ${numberB}`;
