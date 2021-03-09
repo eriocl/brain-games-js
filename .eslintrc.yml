@@ -10,3 +10,4 @@ rules:
   no-console: 0
   import/extensions: 0
   no-plusplus: 'off'
+  no-useless-return: 'off'
