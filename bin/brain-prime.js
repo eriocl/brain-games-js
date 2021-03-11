@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
-import runGame from '../src/games/brain-prime.js';
+import { roundsCount, runEngine } from '../src/engine.js';
+import { generateGameData, gameRule } from '../src/games/brain-prime.js';
 
-runGame();
+const gameData = generateGameData(roundsCount);
+runEngine(gameData, gameRule);

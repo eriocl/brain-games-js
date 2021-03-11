@@ -1,6 +1,5 @@
-import { roundsCount, runEngine } from '../engine.js';
+export const gameRule = 'Find the greatest common divisor of given numbers.';
 
-const gameRule = 'Find the greatest common divisor of given numbers.';
 const findGcd = (first, second) => {
   let a = first;
   let b = second;
@@ -14,7 +13,7 @@ const findGcd = (first, second) => {
   return a;
 };
 
-const generateGameData = () => {
+export const generateGameData = (roundsCount) => {
   const gameData = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const numberA = Math.floor(Math.random() * 30) + 1;
@@ -24,9 +23,4 @@ const generateGameData = () => {
     gameData.push([question, correctAnswer]);
   }
   return gameData;
-};
-
-export default () => {
-  const gameData = generateGameData();
-  runEngine(gameData, gameRule);
 };

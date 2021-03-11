@@ -1,6 +1,4 @@
-import { roundsCount, runEngine } from '../engine.js';
-
-const gameRule = 'What is the result of the expression ?';
+export const gameRule = 'What is the result of the expression ?';
 
 const calculate = (a, b, operation) => {
   switch (operation) {
@@ -15,7 +13,7 @@ const calculate = (a, b, operation) => {
   }
 };
 
-const generateGameData = () => {
+export const generateGameData = (roundsCount) => {
   const operations = ['+', '-', '*'];
   const gameData = [];
   for (let i = 0; i < roundsCount; i += 1) {
@@ -27,9 +25,4 @@ const generateGameData = () => {
     gameData.push([question, correctAnswer]);
   }
   return gameData;
-};
-
-export default () => {
-  const gameData = generateGameData();
-  runEngine(gameData, gameRule);
 };

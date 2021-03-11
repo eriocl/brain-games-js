@@ -1,6 +1,5 @@
-import { roundsCount, runEngine } from '../engine.js';
+export const gameRule = 'What number is missing in the progression?';
 
-const gameRule = 'What number is missing in the progression?';
 const makeProgression = (length, firstElement, step) => {
   const progression = [];
   for (let i = 0; i < length; i += 1) {
@@ -9,7 +8,7 @@ const makeProgression = (length, firstElement, step) => {
   return progression;
 };
 
-const generateGameData = () => {
+export const generateGameData = (roundsCount) => {
   const gameData = [];
   for (let i = 1; i <= roundsCount; i += 1) {
     const progLength = Math.floor(Math.random() * 10) + 8;
@@ -23,9 +22,4 @@ const generateGameData = () => {
     gameData.push([question, correctAnswer]);
   }
   return gameData;
-};
-
-export default () => {
-  const gameData = generateGameData();
-  runEngine(gameData, gameRule);
 };
